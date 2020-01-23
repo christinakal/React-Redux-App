@@ -6,7 +6,6 @@ import Photos from './components/Photos'
 function App() {
   return (
     <div className="App">
-      App component.
       <Photos />
     </div>
   );

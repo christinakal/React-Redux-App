@@ -12,6 +12,3 @@ export const fetchPhotos = () => dispatch => {
         })
         .catch(err => console.log(err));
 }
-
-// const header = Authorization: `Bearer ${token}`;
-// return axios.get(URLConstants.USER_URL, { headers: { header } });
