@@ -10,10 +10,9 @@ const Photos = props => {
     return (
         <div>
             <button onClick={props.fetchPhotos}>Get Photo</button>
-            {/* {props.photos ? <img src={props.photos[0].photo.url_m} /> : <div></div>} */}
             {!props.photos && !props.isLoading && (
                 <h2>Go ahead a fetch a new photo!</h2>
-            )}
+            )}          
             {props.isLoading && (
                 <Loader
                     type="Puff"
@@ -23,7 +22,9 @@ const Photos = props => {
                     timeout={3000} //3 secs 
                 />
             )}
-            {props.photos && !props.isLoading && <img src={props.photos.photos}/>}
+            {props.photos && props.photos.length > 0 && !props.isLoading && (
+                <img src={props.photos[Math.floor(Math.random()*props.photos.length)].url_m}/>
+            )}  
         </div>
     );
 };
