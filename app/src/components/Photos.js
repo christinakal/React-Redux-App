@@ -24,7 +24,7 @@ const Photos = props => {
                 />
             )}
             {props.photos && props.photos.length > 0 && !props.isLoading && (
-                <img src={props.photos[Math.floor(Math.random()*props.photos.length)].url_m}/>
+                <img src={props.photos[Math.floor(Math.random()*props.photos.length)].largeImageURL}/>
             )}  
         </div>
     );
