@@ -9,7 +9,7 @@ const Photos = props => {
     console.log(props);
     return (
         <div className="main-app">
-            <h1>Get random photos from Flickr</h1>
+            <h1>Get random photos from Pixabay</h1>
             <button className="button" onClick={props.fetchPhotos}>Get Photo</button>
             {!props.photos && !props.isLoading && (
                 <h2>Go ahead a fetch a new photo!</h2>
